@@ -11,3 +11,66 @@
 - [*] Reto 4: Terminado
 - [*] Reto 5: Terminado
 - [*] Reto 6: Terminado
+
+ Cuestionario de Laboratorio - Respuestas
+ ¿Diferencia entre git merge y git rebase?
+
+ Merge: Une las historias de dos ramas creando un nuevo "commit de merge", preservando el historial completo de cómo se cruzaron las ramas.
+
+ Rebase: Mueve la base de tu rama actual a un nuevo punto inicial, creando una línea de tiempo lineal y limpia (reescribe el historial).
+
+ ¿Qué sucede si dos ramas modifican la misma línea?
+
+ Se genera un Conflicto de Merge. Git detiene el proceso y pide al usuario que decida manualmente qué cambios conservar antes de poder finalizar el commit.
+
+ ¿Cómo ver gráficamente el historial en consola?
+
+ Utilizando el comando: git log --graph --oneline --all.
+
+ Diferencia entre commit y push:
+
+ Commit: Guarda los cambios en tu repositorio local (es como un "punto de control" en tu PC).
+
+ Push: Envía esos commits locales al repositorio remoto (GitHub) para que otros los vean.
+
+ ¿Para qué sirven git stash y git pop?
+
+ Stash: Guarda temporalmente cambios que no has terminado en una "pila" interna para dejar limpia la rama.
+
+ Pop: Recupera esos cambios guardados y los aplica de nuevo en el código actual.
+
+ ¿Diferencia entre HashMap y HashTable?
+
+ HashMap: No es sincronizado (más rápido), permite una clave nula y múltiples valores nulos.
+
+ HashTable: Es sincronizado (seguro para hilos/Thread-safe), no permite claves ni valores nulos.
+
+ Ventajas de Collectors.toMap() vs bucle tradicional:
+
+ Ofrece un código más legible y declarativo, permite manejar colisiones de forma elegante con funciones lambda y se integra directamente con el procesamiento en paralelo de los Streams.
+
+ ¿Qué operación es stream().map()?
+
+ Es una operación intermedia de transformación. Convierte cada elemento de la lista original en un nuevo tipo o formato (proyección).
+
+ ¿Qué hace stream().filter() y qué retorna?
+
+ Evalúa cada elemento según una condición lógica (Predicate). Retorna un nuevo Stream que contiene solo los elementos que cumplieron dicha condición.
+
+ Paso a paso para crear una rama desde develop:
+
+ git checkout develop (aseguras estar en la base).
+
+ git pull origin develop (actualizas con lo último de la nube).
+
+ git checkout -b feature/nombre_funcionalidad (creas y te mueves a la rama nueva).
+
+ Diferencia entre git branch y git checkout -b:
+
+ git branch [nombre]: Crea la rama pero te deja en la rama actual.
+
+ git checkout -b [nombre]: Crea la rama y te cambia automáticamente a ella.
+
+ ¿Por qué usar ramas feature/ en lugar de main?
+
+ Evita que código inestable o con errores rompa la versión de producción (main). Facilita el trabajo en equipo y permite revisiones de código antes de integrar cambios finales.
